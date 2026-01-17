@@ -3,6 +3,10 @@ name: "Terraform Destroy"
 on:
   workflow_dispatch: # Allows you to trigger this manually from the Actions tab
 
+permissions:
+  id-token: write # Required for OIDC
+  contents: read  # Required for checkout
+
 jobs:
   terraform-destroy:
     runs-on: ubuntu-latest
