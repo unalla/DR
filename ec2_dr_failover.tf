@@ -6,7 +6,7 @@ provider "aws" {
 # 2. Security Group allowing essential traffic
 resource "aws_security_group" "dr_sg" {
   name        = "disaster-recovery-sg"
-  description = "Allow SSH and Web traffic"
+  description = "Allow SSH & Web traffic"
 
   ingress {
     from_port   = 22
