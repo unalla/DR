@@ -32,7 +32,7 @@ resource "aws_security_group" "dr_sg" {
 
 # 3. Create the Primary EC2 Instance (Active)
 resource "aws_instance" "primary" {
-  ami           = "ami-0c55b159cbfafe1f0" # Replace with your region's AMI
+  ami           = "ami-08ddded491c27c224" # Replace with your region's AMI
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.dr_sg.id]
 
@@ -43,7 +43,7 @@ resource "aws_instance" "primary" {
 
 # 4. Create the Standby EC2 Instance (Failover)
 resource "aws_instance" "standby" {
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-08ddded491c27c224"
   instance_type = "t2.micro"
   vpc_security_group_ids = [aws_security_group.dr_sg.id]
 
