@@ -1,7 +1,3 @@
-# 1. Define the Provider
-provider "aws" {
-  region = "us-east-1"
-}
 
 # 2. Security Group allowing essential traffic
 resource "aws_security_group" "dr_sg" {

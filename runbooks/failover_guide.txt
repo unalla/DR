@@ -1,0 +1,6 @@
+Failover Guide: 2-Instance EIP Re-association Scenario: Primary EC2 (Instance A) fails, and traffic must shift to Secondary EC2 (Instance B). 
+Step 1: Identify the Allocation ID of the Elastic IP (e.g., eipalloc-0123456789abcdef). 
+Step 2: Identify the Instance ID of the Secondary EC2 (e.g., i-0987654321fedcba). 
+Step 3: Use the AWS CLI or SDK to disassociate the EIP from Instance A if it is still attached. 
+Step 4: Re-associate the EIP to Instance B using the command: aws ec2 associate-address --instance-id i-0987654321fedcba --allocation-id eipalloc-0123456789abcdef. 
+Verification: Ping the Elastic IP to ensure it resolves to Instance B
