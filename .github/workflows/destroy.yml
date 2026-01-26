@@ -24,7 +24,9 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init # Connects to your S3 backend
+        run: terraform -chdir=terraform init 
 
-      - name: Terraform Destroy
-        run: terraform destroy -auto-approve        
+      - name: Terraform Destroy 
+        run: terraform -chdir=terraform apply -auto-approve
+
+          
