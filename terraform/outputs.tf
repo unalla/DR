@@ -16,10 +16,10 @@ output "standby_instance_id" {
 }
 
 # 3. Pinecone Knowledge Base Details
-output "pinecone_index_host" {
-  description = "The endpoint URL for the Pinecone index where runbooks are stored."
-  value       = pinecone_index.dr_knowledge.host
-}
+#output "pinecone_index_host" {
+  #description = "The endpoint URL for the Pinecone index where runbooks are stored."
+  #value       = pinecone_index.dr_knowledge.host
+#}
 
 # 4. Monitoring & Alerting
 output "cloudwatch_alarm_arn" {

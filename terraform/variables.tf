@@ -4,12 +4,6 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "pinecone_api_key" {
-  description = "API Key for Pinecone Vector Database"
-  type        = string
-  sensitive   = true # Prevents the key from being logged in plain text
-}
-
 variable "instance_id" {
   description = "The ID of the primary EC2 instance to monitor"
   type        = string
