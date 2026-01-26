@@ -1,10 +1,6 @@
 # Local .terraform directories (contains large binaries)
 **/.terraform/*
 
-# Ignore python environment file
-.env
-env
-
 # .tfstate files (can contain secrets and shouldn't be in Git)
 *.tfstate
 *.tfstate.*
