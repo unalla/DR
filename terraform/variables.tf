@@ -4,10 +4,11 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
-variable "instance_id" {
-  description = "The ID of the primary EC2 instance to monitor"
-  type        = string
-}
+# variable "instance_id" {
+#   description = "The ID of the primary EC2 instance to monitor"
+#   type        = string
+#   value       = aws_instance.primary.id
+# }
 
 #variable "sns_topic_arn" {
   #description = "The ARN of the SNS topic for DR alerts"
