@@ -10,7 +10,7 @@ resource "aws_cloudwatch_metric_alarm" "primary_health_alarm" {
   alarm_description   = "Triggered when the primary EC2 instance fails health checks."
   
   dimensions = {
-    InstanceId = var.instance_id
+    InstanceId = aws_instance.primary.id
   }
 
   # Action: Notify the SNS topic (which triggers your AI Runbook Optimizer)
