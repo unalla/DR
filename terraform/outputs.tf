@@ -27,7 +27,7 @@ output "cloudwatch_alarm_arn" {
   value       = aws_cloudwatch_metric_alarm.primary_health_alarm.arn
 }
 
-output "sns_topic_arn" {
-  description = "The ARN of the SNS topic used for AI notifications."
-  value       = aws_sns_topic.dr_alerts.arn
-}
+# output "sns_topic_arn" {
+#  description = "The ARN of the SNS topic used for AI notifications."
+#  value       = aws_sns_topic.dr_alerts.arn
+# }

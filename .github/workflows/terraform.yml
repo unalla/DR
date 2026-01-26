@@ -26,5 +26,8 @@ jobs:
       - name: Terraform Init
         run: terraform -chdir=terraform init -reconfigure
 
+      - name: Terraform Plan
+        run: terraform -chdir=terraform plan -refresh=false
+
       - name: Terraform Apply
         run: terraform -chdir=terraform apply -auto-approve

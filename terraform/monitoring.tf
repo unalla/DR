@@ -14,5 +14,5 @@ resource "aws_cloudwatch_metric_alarm" "primary_health_alarm" {
   }
 
   # Action: Notify the SNS topic (which triggers your AI Runbook Optimizer)
-  alarm_actions = [var.sns_topic_arn]
+  # alarm_actions = [var.sns_topic_arn]
 }
